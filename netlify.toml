@@ -1,0 +1,4 @@
+[build]
+  # Static site: no build step, publish the pre-built files as-is.
+  publish = "site"
+  command = ""
