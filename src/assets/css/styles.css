@@ -279,6 +279,7 @@ main:focus { outline: none; }
 .about__photo { position: relative; margin: 0 auto; width: min(560px, 100%); }
 .about__photo::before { content: ""; position: absolute; inset: 1.5rem -1.5rem -1.5rem 1.5rem; border-radius: 48% 52% 40% 60% / 38% 42% 58% 62%; background: var(--lilac-soft); z-index: -1; }
 .about__photo img { width: 100%; height: auto; border-radius: 180px 180px var(--radius) var(--radius); box-shadow: var(--shadow); }
+@media (max-width: 600px) { .about__photo::before { inset: 1rem -.75rem -1rem 1rem; } }
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: .9rem; }
