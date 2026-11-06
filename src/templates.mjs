@@ -604,7 +604,7 @@ export function aboutPage() {
   </div>
 </section>
 <section class="section section--tight">
-  <div class="wrap wrap--narrow center">${logoImg('about__logo')}</div>
+  <div class="wrap wrap--narrow"><figure class="about__photo"><img src="/assets/img/photos/community.webp" width="996" height="1170" loading="lazy" alt="Women chatting and laughing at a Femalin Peptides community event"></figure></div>
 </section>`;
   return page('/about/', a.title, a.description, body);
 }
