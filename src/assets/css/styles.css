@@ -276,7 +276,10 @@ main:focus { outline: none; }
 .steps__n { flex: none; display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; background: var(--mauve); color: #fff; font: 400 1.5rem var(--font-display); }
 .steps p { color: var(--ink-soft); font-size: 1.1rem; }
 .back-links { display: flex; flex-wrap: wrap; gap: .75rem 2rem; }
-.about__logo { width: min(320px, 70%); margin-inline: auto; }
+.about__photo { position: relative; margin: 0 auto; width: min(560px, 100%); }
+.about__photo::before { content: ""; position: absolute; inset: 1.5rem -1.5rem -1.5rem 1.5rem; border-radius: 48% 52% 40% 60% / 38% 42% 58% 62%; background: var(--lilac-soft); z-index: -1; }
+.about__photo img { width: 100%; height: auto; border-radius: 180px 180px var(--radius) var(--radius); box-shadow: var(--shadow); }
+@media (max-width: 600px) { .about__photo::before { inset: 1rem -.75rem -1rem 1rem; } }
 
 /* ---------- FAQ ---------- */
 .faq { display: grid; gap: .9rem; }
