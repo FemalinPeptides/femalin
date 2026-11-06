@@ -2,7 +2,7 @@ import { site, nav, footerLinks, footerDisclaimer, heroDisclaimer } from './data
 import { labels, topics, peptides, bySlug } from './data/peptides.mjs';
 import { symptoms, symptomIntro } from './data/symptoms.mjs';
 import * as P from './data/pages.mjs';
-import { esc, rich, linkPeptides, sourcesSection, icon, heroArt, chainDivider } from './lib.mjs';
+import { esc, rich, linkPeptides, sourcesSection, icon, chainDivider } from './lib.mjs';
 
 /* =========================================================
    Shared components
@@ -172,7 +172,12 @@ export function homePage() {
       ])}
       <p class="fine">${icon('info', { size: 18 })}<span>${esc(heroDisclaimer)}</span></p>
     </div>
-    <div class="hero__art">${heroArt()}</div>
+    <div class="hero__art hero-photo">
+      <span class="hero-photo__blob" aria-hidden="true"></span>
+      <figure class="hero-photo__main"><img src="/assets/img/photos/vials.webp" width="1170" height="730" fetchpriority="high" alt="Three Femalin Peptides vials labelled BPC-157, GHK-Cu and KPV on travertine stone with dried lilac"></figure>
+      <figure class="hero-photo__inset"><img src="/assets/img/photos/kit-round.webp" width="520" height="520" loading="lazy" alt="Femalin vials in a pink and white storage case beside a green plant"></figure>
+      <span class="hero-photo__sprig" aria-hidden="true">${chainDivider()}</span>
+    </div>
   </div>
 </section>
 
@@ -365,10 +370,15 @@ export function peptidesIndexPage() {
 
   const body = `
 <section class="page-head">
-  <div class="wrap wrap--narrow">
+  <div class="wrap">
     ${breadcrumb([{ label: 'Home', href: '/' }, { label: 'List of peptides' }])}
-    <h1 class="h-page">${esc(d.heading)}</h1>
-    <p class="lead">${esc(d.lead)}</p>
+    <div class="page-head__split">
+      <div>
+        <h1 class="h-page">${esc(d.heading)}</h1>
+        <p class="lead">${esc(d.lead)}</p>
+      </div>
+      <figure class="leaf-photo"><img src="/assets/img/photos/boxes.webp" width="1170" height="706" alt="Femalin Peptides boxes for GHK-Cu, BPC-157 and KPV with a KPV vial, on stone"></figure>
+    </div>
   </div>
 </section>
 
