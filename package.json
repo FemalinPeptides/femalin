@@ -1,0 +1,12 @@
+{
+  "name": "femalin-peptides-site",
+  "version": "1.0.0",
+  "description": "Femalin Peptides \u2014 static education website",
+  "scripts": {
+    "build": "node build.mjs",
+    "start": "node build.mjs && node serve.mjs",
+    "serve": "node serve.mjs"
+  },
+  "private": true,
+  "type": "module"
+}
